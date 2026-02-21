@@ -1,0 +1,12 @@
+{
+  "name": "sann404-anime-stream",
+  "version": "1.0.0",
+  "description": "Modern Anime Streaming Web",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
