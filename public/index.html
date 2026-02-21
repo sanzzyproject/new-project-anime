@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SANN404 Stream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <h1 id="app-title">SANN404 Stream</h1>
+    </header>
+
+    <main class="content-area">
+        
+        <div id="loading" class="hidden">
+            <i class="fas fa-spinner fa-spin"></i> Memuat...
+        </div>
+
+        <section id="home-sec" class="page-sec active">
+            <h2 class="section-title">Trending & Terbaru</h2>
+            <div id="home-grid" class="anime-grid"></div>
+        </section>
+
+        <section id="search-sec" class="page-sec hidden">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Cari anime...">
+                <button onclick="searchAnime()"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="search-results" class="anime-grid"></div>
+        </section>
+
+        <section id="detail-sec" class="page-sec hidden">
+            <button class="back-btn" onclick="showPage('home-sec')"><i class="fas fa-arrow-left"></i> Kembali</button>
+            
+            <div id="player-container" class="hidden">
+                <iframe id="video-player" src="" allowfullscreen></iframe>
+            </div>
+
+            <div id="anime-info"></div>
+            
+            <h3 class="section-title" style="margin-top: 15px;">Daftar Episode</h3>
+            <div id="episode-list" class="episode-grid"></div>
+        </section>
+
+        <section id="profile-sec" class="page-sec hidden">
+            <div class="profile-card">
+                <div class="profile-avatar">S</div>
+                <h2>SANN404 FORUM</h2>
+                <p>Developer & Creator</p>
+                <div class="profile-links">
+                    <a href="https://whatsapp.com/channel/" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp Channel</a>
+                    <a href="https://lynk.id/" target="_blank" class="lynk-btn"><i class="fas fa-store"></i> Lynk.id Store</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="showPage('home-sec', this)">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" onclick="showPage('search-sec', this)">
+            <i class="fas fa-search"></i>
+            <span>Cari</span>
+        </div>
+        <div class="nav-item" onclick="showPage('profile-sec', this)">
+            <i class="fas fa-user"></i>
+            <span>Profil</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
